@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AR.js Hiro Marker – Single 3D Model</title>
+  <title>AR.js Hiro Marker – Even Lighting</title>
 
-  <!-- A-Frame -->
   <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-
-  <!-- AR.js -->
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 
   <style>
@@ -32,16 +29,17 @@
 
   <a-marker preset="hiro">
 
-    <!-- SAFE LIGHTING -->
-    <a-light type="ambient" intensity="0.9"></a-light>
-    <a-light type="directional" position="1 2 1" intensity="3.8"></a-light>
+    <!-- EVEN LIGHTING -->
+    <a-light type="ambient" intensity="1.8"></a-light>
+    <a-light type="directional" position="1 2 1" intensity="0.6"></a-light>
+    <a-light type="directional" position="-1 2 1" intensity="0.6"></a-light>
+    <a-light type="directional" position="0 2 -1" intensity="0.6"></a-light>
 
-    <!-- 3D MODEL -->
+    <!-- MODEL -->
     <a-entity
       gltf-model="#model"
       scale="1 1 1"
       position="0 0 0"
-      rotation="0 0 0"
     ></a-entity>
 
   </a-marker>
